@@ -99,6 +99,25 @@ var DonutChart = function(){
             .attr("x1", -120).attr("y1", 0)
             .attr("x2", -130).attr("y2", 0)
             .attr("transform", d=>"rotate("+sensorDomainArray[1]*180+d*180/10+")"); 
+
+        
+        let det3=[];                    //membuat tik yang paling kecil 
+        for (let i=1; i<51; i++){
+            if (i%5!=0){
+                det3.push(i);
+            }
+        }
+        console.log(det3);
+        l3.selectAll("line")
+            .data(det3)
+            .enter()
+            .append("line") 
+            .style("stroke", "black")
+            .style("stroke-width", 1)
+            .attr("x1", -123).attr("y1", 0)
+            .attr("x2", -130).attr("y2", 0)
+            .attr("transform", d=>"rotate("+sensorDomainArray[1]*180+d*180/50+")"); 
+
         //..............INI CARA YANG MEMBOSANKAN MEMBUAT SATU PERSATU........................
         // tickkecil=l.append("line").style("stroke", "black").style("stroke-width", 1)
         //     .attr("x1", -120).attr("y1", 0).attr("x2", -130).attr("y2", 0)
