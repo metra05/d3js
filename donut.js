@@ -108,7 +108,7 @@ var DonutChart = function(){
             }
         }
         console.log(det3);
-        l3.selectAll("line")
+        l.selectAll("line")
             .data(det3)
             .enter()
             .append("line") 
